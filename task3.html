@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vowels from string</title>
+</head>
+<body>
+    <script>
+
+        let string1 = ['J','Z','D','Q','L','W','A','H','Y','K','G','N','V','R','P','X','C','M','F','O','U','S','I','E','T','B']
+
+        const string2 =[];
+
+        for (let i = 0; i < string1.length; i++) {
+    if (string1[i] === 'A' || string1[i] === 'E' || string1[i] === 'I' || string1[i] === 'O' || string1[i] === 'U') {
+        string2.push(string1[i]);
+    }
+}
+
+for (let i = 0; i < string2.length; i++) {
+    string2[i] = string2[i].toLowerCase();
+}
+
+        for(let i=0;i<string2.length;i++){
+            for(let j=i+1;j<string2.length;j++){
+                if(string2[i]>string2[j]){
+                    let temp =string2[i];
+                    string2[i] =string2[j];
+                    string2[j] = temp;
+                }
+            }
+        }
+
+
+        console.log(string2);
+  
+    </script>
+</body>
+</html>
